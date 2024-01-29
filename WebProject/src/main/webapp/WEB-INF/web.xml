@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app>
+	<security-role>
+		<role-name>admin</role-name>
+	</security-role>
+	<security-constraint>
+		<web-resource-collection>
+			<web-resource-name>WebProject</web-resource-name>
+			<url-pattern>/home.jsp</url-pattern> <!--여기에 상품등록 페이지 ???  -->
+		</web-resource-collection>
+		<auth-constraint>
+			<description>권한 관리자명</description>
+			<role-name>admin</role-name>
+		</auth-constraint>
+	</security-constraint>
+	<login-config>
+		<auth-method>FORM</auth-method>
+		<form-login-config>
+			<form-login-page>/Login.jsp</form-login-page>
+			<form-error-page>/login_failed.jsp</form-error-page>
+		</form-login-config>
+	</login-config>
+	
+	
+</web-app>
+
